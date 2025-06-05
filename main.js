@@ -1,6 +1,6 @@
 /** @type {HTMLCanvasElement} */
 const carCanvas = document.getElementById("carCanvas");
-carCanvas.width = 200;
+carCanvas.width = window.innerWidth*0.8;
 
 const networkCanvas = document.getElementById("networkCanvas");
 networkCanvas.width = 300;
@@ -62,8 +62,8 @@ function animate(time){
     bestCar = cars.find(c =>
         c.y== Math.min(...cars.map(c => c.y)))
 
-    carCanvas.height = window.innerHeight;
-    networkCanvas.height = window.innerHeight;
+    carCanvas.height = window.innerHeight * 0.5;
+    networkCanvas.height = window.innerHeight *0.5;
 
     carCtx.save();
     carCtx.translate(0, -bestCar.y+ carCanvas.height*0.7);

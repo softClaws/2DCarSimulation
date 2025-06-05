@@ -1,11 +1,13 @@
 
 body{
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: darkgray;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    margin-right: 1rem;
 }
 #verticalButton{
     display: flex;
@@ -26,4 +28,5 @@ button:hover{
 }
 #carCanvas{
     background: lightgray;
+    
 }
