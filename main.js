@@ -8,7 +8,7 @@ networkCanvas.width = 300;
 const carCtx = carCanvas.getContext("2d");
 const networkCtx = networkCanvas.getContext("2d");
 
-const road = new Road(carCanvas.width/2, carCanvas.width * 0.9);
+const road = new Road(carCanvas.width/2, carCanvas.width * 0.9, 5);
 const N = 300;
 const cars =generateCars(N);
 
@@ -24,17 +24,17 @@ if(localStorage.getItem("bestBrain")){
 }
 
 const traffic =[
-    new Car(road.getLaneCenter(1), -100, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(2), -300, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(0), -250, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(0), -400, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(1), -200, 25,50, "DUMMY",1),
+    new Car(road.getLaneCenter(4), -100, 30,55, "DUMMY",1),
+    new Car(road.getLaneCenter(2), -100, 30,55, "DUMMY",2),
+    new Car(road.getLaneCenter(0), -500, 30,55, "DUMMY",1),
+    new Car(road.getLaneCenter(4), -400, 30,70, "DUMMY",1),
+    new Car(road.getLaneCenter(1), -200, 30,70, "DUMMY",1),
 
-    new Car(road.getLaneCenter(1), -450, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(2), -500, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(0), -600, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(0), -700, 25,50, "DUMMY",1),
-    new Car(road.getLaneCenter(1), -750, 25,50, "DUMMY",1)];
+    new Car(road.getLaneCenter(1), -450, 30,70, "DUMMY",1),
+    new Car(road.getLaneCenter(2), -500, 30,55, "DUMMY",1),
+    new Car(road.getLaneCenter(4), -600, 25,50, "DUMMY",1),
+    new Car(road.getLaneCenter(3), -700, 25,50, "DUMMY",1.5),
+    new Car(road.getLaneCenter(1), -750, 20,50, "DUMMY",1.5)];
 
 function save(){
     localStorage.setItem("bestBrain",
